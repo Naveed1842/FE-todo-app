@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Status</th>
+  </thead>
+  <tbody>
+    <tr class="todo-item" *ngFor="let item of todoList">
+      <td class="id">{{ item.id }}</td>
+      <td class="name">{{ item.name }}</td>
+      <td class="description">{{ item.description }}</td>
+      <td class="status">{{ item.status }}</td>
+    </tr>
+  </tbody>
+</table>
