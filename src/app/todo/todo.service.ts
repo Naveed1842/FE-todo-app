@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Todo } from './todo.model';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 
@@ -15,5 +15,8 @@ export class TodoService {
     return this.httpClient.get<Todo[]>('http://localhost:3000/todo/all', {
       observe: 'response',
     });
+  }
+  createTodo():Observable<any>{
+    return of({});
   }
 }
