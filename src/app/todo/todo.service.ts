@@ -16,7 +16,7 @@ export class TodoService {
       observe: 'response',
     });
   }
-  createTodo():Observable<any>{
-    return of({});
+  createTodo(item: any): Observable<any> {
+    return this.httpClient.post<Todo[]>('http://localhost:3000/todo/create', item);
   }
 }

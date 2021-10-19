@@ -1,3 +1,8 @@
+<h1>Todo App</h1>
+<div>
+  <input type="text" [(ngModel)]="inputValue" placeholder="add todo" />
+  <button (click)="handleClick()">Add Todo</button>
+</div>
 <table>
   <thead>
     <th>ID</th>
@@ -14,3 +19,10 @@
     </tr>
   </tbody>
 </table>
+
+<!-- <ul *ngIf="todoList.length>0">
+  <li *ngFor = "let task of todoList;let i = index">
+      {{task |json}}
+    <input type="checkbox" [(ngModel)]="task.status">
+  </li>
+</ul> -->
